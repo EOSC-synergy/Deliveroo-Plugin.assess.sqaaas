@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/matteogrisenti/Deliveroo-Plugin:
+      branch: master
+      repo: https://github.com/matteogrisenti/Deliveroo-Plugin
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/matteogrisenti/Deliveroo-Plugin git:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-celadon-urchin.sh
+        container: qc.acc_randy-ivory-fly
+  QC.Doc:
+    repos:
+      github.com/matteogrisenti/Deliveroo-Plugin find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-plum-molly.sh
+        container: qc.doc_muzzy-viridian-caterpillar
+      github.com/matteogrisenti/Deliveroo-Plugin git:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-auburn-leopard.sh
+        container: qc.doc_gloppy-xanthic-kakapo
+      github.com/matteogrisenti/Deliveroo-Plugin markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-amber-hyrax.sh
+        container: qc.doc_bluesy-tomato-skunk
+  QC.Lic:
+    repos:
+      github.com/matteogrisenti/Deliveroo-Plugin licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-bronze-dog.sh
+        container: qc.lic_queasy-firebrick-gar
+  QC.Sty:
+    repos:
+      github.com/matteogrisenti/Deliveroo-Plugin hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-persimmon-binturong.sh
+        container: qc.sty_snippy-jade-newfoundland
+      github.com/matteogrisenti/Deliveroo-Plugin jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-tangerine-forest.sh
+        container: qc.sty_pasty-alizarin-argentino
+  QC.Ver:
+    repos:
+      github.com/matteogrisenti/Deliveroo-Plugin get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-jade-robin.sh
+        container: qc.ver_surly-carmine-dragonfly
+timeout: 5400
