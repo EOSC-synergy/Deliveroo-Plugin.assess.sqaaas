@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/matteogrisenti/Deliveroo-Plugin git:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-celadon-urchin.sh
-        container: qc.acc_randy-ivory-fly
+        - /usr/bin/env sh .sqa/script.craggy-taupe-woodpecker.sh
+        container: qc.acc_snappy-fuchsia-beetle
   QC.Doc:
     repos:
       github.com/matteogrisenti/Deliveroo-Plugin find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-plum-molly.sh
-        container: qc.doc_muzzy-viridian-caterpillar
+        - /usr/bin/env sh .sqa/script.breezy-eggplant-bongo.sh
+        container: qc.doc_greasy-copper-crocodile
       github.com/matteogrisenti/Deliveroo-Plugin git:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-auburn-leopard.sh
-        container: qc.doc_gloppy-xanthic-kakapo
+        - /usr/bin/env sh .sqa/script.cranky-white-drever.sh
+        container: qc.doc_stealthy-violet-nightingale
       github.com/matteogrisenti/Deliveroo-Plugin markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-amber-hyrax.sh
-        container: qc.doc_bluesy-tomato-skunk
+        - /usr/bin/env sh .sqa/script.snoopy-ruby-centipede.sh
+        container: qc.doc_snoopy-auburn-jaguar
   QC.Lic:
     repos:
       github.com/matteogrisenti/Deliveroo-Plugin licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-bronze-dog.sh
-        container: qc.lic_queasy-firebrick-gar
+        - /usr/bin/env sh .sqa/script.sleepy-amaranth-civet.sh
+        container: qc.lic_cloudy-apricot-avocet
   QC.Sty:
     repos:
       github.com/matteogrisenti/Deliveroo-Plugin hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-persimmon-binturong.sh
-        container: qc.sty_snippy-jade-newfoundland
+        - /usr/bin/env sh .sqa/script.crappy-aqua-cassowary.sh
+        container: qc.sty_lanky-amaranth-mau
       github.com/matteogrisenti/Deliveroo-Plugin jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-tangerine-forest.sh
-        container: qc.sty_pasty-alizarin-argentino
+        - /usr/bin/env sh .sqa/script.wimpy-flax-squirrel.sh
+        container: qc.sty_gloppy-teal-goat
   QC.Ver:
     repos:
       github.com/matteogrisenti/Deliveroo-Plugin get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-jade-robin.sh
-        container: qc.ver_surly-carmine-dragonfly
+        - /usr/bin/env sh .sqa/script.cloudy-viridian-paradise.sh
+        container: qc.ver_gamy-cerulean-gorilla
 timeout: 5400
